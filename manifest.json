@@ -1,7 +1,7 @@
 {
-  "name": "カクテル原価計算ツール",
-  "short_name": "原価計算",
-  "description": "バー営業で使うカクテル原価計算ツールです。",
+  "name": "Bar Soutsu カクテル原価計算ツール",
+  "short_name": "Bar Soutsu",
+  "description": "Bar Soutsuのカクテル原価計算ツールです。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

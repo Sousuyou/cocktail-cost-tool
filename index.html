@@ -8,7 +8,7 @@
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; worker-src 'self'; manifest-src 'self'"
     />
-    <title>カクテル原価計算ツール</title>
+    <title>Bar Soutsu カクテル原価計算ツール</title>
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="assets/icon.svg" />
@@ -18,7 +18,8 @@
     <main class="app-shell">
       <section class="hero" aria-labelledby="page-title">
         <div>
-          <p class="eyebrow">Bar Cost Calculator</p>
+          <p class="brand-mark">Bar Soutsu</p>
+          <p class="eyebrow">Cost Calculator</p>
           <h1 id="page-title">カクテル原価計算ツール</h1>
           <p class="lead">材料ごとの原価、合計原価、原価率、目標原価率からの推奨販売価格をその場で確認できます。</p>
         </div>
@@ -32,12 +33,12 @@
       <section class="controls-band" aria-label="販売条件">
         <label>
           <span>販売価格</span>
-          <input id="sale-price" type="number" min="0" step="1" inputmode="decimal" placeholder="例: 1200" />
+          <input id="sale-price" type="number" min="0" step="1" inputmode="decimal" value="1300" placeholder="例: 1300" />
         </label>
         <label>
           <span>目標原価率</span>
           <div class="input-suffix">
-            <input id="target-rate" type="number" min="0" step="0.1" inputmode="decimal" placeholder="例: 25" />
+            <input id="target-rate" type="number" min="0" step="0.1" inputmode="decimal" value="20" placeholder="例: 20" />
             <span>%</span>
           </div>
         </label>

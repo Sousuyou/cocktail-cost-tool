@@ -1,4 +1,4 @@
-const CACHE_NAME = "cocktail-cost-tool-v1";
+const CACHE_NAME = "cocktail-cost-tool-v2";
 const CACHE_FILES = [
   "./",
   "./index.html",

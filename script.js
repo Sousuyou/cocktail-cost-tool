@@ -207,8 +207,8 @@ csvFileInput.addEventListener("change", (event) => {
   event.target.value = "";
 });
 
-addIngredientRow({ name: "ドライジン", bottlePrice: 3200, bottleVolume: 700, usedVolume: 45 });
-addIngredientRow({ name: "ベルモット", bottlePrice: 1800, bottleVolume: 750, usedVolume: 15 });
+addIngredientRow({ name: "ドライジン", bottlePrice: 5000, bottleVolume: 500, usedVolume: 45 });
+addIngredientRow({ name: "トニックウォーター", bottlePrice: 180, bottleVolume: 200, usedVolume: 120 });
 
 if ("serviceWorker" in navigator && window.isSecureContext) {
   window.addEventListener("load", () => {
