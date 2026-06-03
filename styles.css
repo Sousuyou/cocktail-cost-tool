@@ -465,10 +465,23 @@ input:focus {
     padding: 14px;
   }
 
-  .hero,
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
   .controls-band,
   .ingredient-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .controls-band .metric {
+    grid-column: auto;
+  }
+
+  .ingredient-row label:first-child,
+  .ingredient-row label:nth-child(2),
+  .ingredient-row .row-cost {
+    grid-column: 1 / -1;
   }
 
   .hero,
