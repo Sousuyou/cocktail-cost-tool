@@ -4,6 +4,8 @@
   --paper: #fbfaf6;
   --panel: #fbfaf6;
   --panel-soft: #f3f2ee;
+  --field: #ffffff;
+  --field-active: #f7f8f8;
   --line: #c9c8c2;
   --line-strong: #242424;
   --text: #161616;
@@ -93,7 +95,7 @@ button.secondary,
 }
 
 .hero::before {
-  content: "FORM BS-CC-01";
+  content: "";
   position: absolute;
   right: 0;
   top: 0;
@@ -230,18 +232,23 @@ label {
 input {
   width: 100%;
   min-height: 34px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--line-strong);
   border-radius: 0;
   padding: 7px 8px;
-  background: #ffffff;
+  background: var(--field);
   color: var(--text);
   font-size: 0.82rem;
   outline: none;
 }
 
+input:hover {
+  background: var(--field-active);
+}
+
 input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(23, 23, 23, 0.08);
+  background: #ffffff;
+  box-shadow: inset 0 -2px 0 var(--accent);
 }
 
 .input-suffix {
@@ -390,9 +397,19 @@ input:focus {
 }
 
 .ingredient-row input {
-  border: 0;
-  background: transparent;
-  min-height: 54px;
+  min-height: 38px;
+  border: 1px solid var(--line);
+  background: var(--field);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.ingredient-row input:hover {
+  background: var(--field-active);
+}
+
+.ingredient-row input:focus {
+  border-color: var(--accent);
+  box-shadow: inset 0 -2px 0 var(--accent);
 }
 
 .is-empty .remove-row {
