@@ -72,10 +72,7 @@ button.secondary,
   margin: 24px auto;
   padding: 28px;
   border: 1px solid var(--line-strong);
-  background:
-    linear-gradient(var(--line) 1px, transparent 1px),
-    var(--paper);
-  background-size: 100% 32px;
+  background: var(--paper);
   box-shadow: var(--shadow);
 }
 
