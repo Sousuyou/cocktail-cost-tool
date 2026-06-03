@@ -1,17 +1,15 @@
 :root {
-  color-scheme: dark;
-  --bg: #0d0e10;
-  --panel: #17191c;
-  --panel-soft: #202327;
-  --line: #30343a;
-  --line-strong: #454b53;
-  --text: #f2f0ea;
-  --muted: #a6a8aa;
-  --brass: #b88745;
-  --steel: #c5c8c7;
-  --green: #8fb99a;
-  --danger: #bd6559;
-  --shadow: 0 22px 70px rgba(0, 0, 0, 0.42);
+  color-scheme: light;
+  --bg: #f7f7f5;
+  --panel: #ffffff;
+  --panel-soft: #f1f1ef;
+  --line: #deded9;
+  --line-strong: #b9b9b2;
+  --text: #171717;
+  --muted: #6f6f68;
+  --accent: #171717;
+  --danger: #8a3a32;
+  --shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
 }
 
 * {
@@ -28,13 +26,7 @@ body {
     "Hiragino Sans",
     "Yu Gothic",
     sans-serif;
-  background:
-    linear-gradient(rgba(13, 14, 16, 0.88), rgba(13, 14, 16, 0.96)),
-    url("assets/bar-background.png");
-  background-size:
-    cover;
-  background-attachment: fixed;
-  background-position: center;
+  background: var(--bg);
   color: var(--text);
 }
 
@@ -45,12 +37,12 @@ input {
 
 button {
   min-height: 44px;
-  border: 1px solid var(--brass);
+  border: 1px solid var(--accent);
   border-radius: 4px;
-  background: var(--brass);
-  color: #101112;
+  background: var(--accent);
+  color: #ffffff;
   font-size: 0.9rem;
-  font-weight: 850;
+  font-weight: 700;
   cursor: pointer;
   transition:
     transform 160ms ease,
@@ -65,7 +57,7 @@ button:hover,
 
 button.secondary,
 .file-button {
-  background: transparent;
+  background: var(--panel);
   color: var(--text);
   border-color: var(--line);
 }
@@ -77,17 +69,16 @@ button.secondary,
 }
 
 .hero {
-  min-height: 300px;
+  min-height: 220px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
   gap: 24px;
   align-items: end;
-  padding: 38px;
+  padding: 32px;
   border: 1px solid var(--line);
   border-radius: 6px;
-  background: rgba(18, 20, 23, 0.88);
+  background: var(--panel);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(12px);
   position: relative;
   overflow: hidden;
 }
@@ -95,11 +86,11 @@ button.secondary,
 .hero::before {
   content: "";
   position: absolute;
-  left: 38px;
-  right: 38px;
-  top: 26px;
+  left: 32px;
+  right: 32px;
+  top: 24px;
   height: 1px;
-  background: linear-gradient(90deg, var(--brass), transparent);
+  background: var(--line);
   pointer-events: none;
 }
 
@@ -110,18 +101,24 @@ button.secondary,
 .brand-mark {
   margin: 0 0 12px;
   color: var(--text);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.85rem, 5vw, 3.5rem);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Hiragino Sans",
+    "Yu Gothic",
+    sans-serif;
+  font-size: clamp(1.35rem, 4vw, 2.4rem);
   line-height: 1;
   letter-spacing: 0;
-  font-weight: 900;
+  font-weight: 750;
 }
 
 .eyebrow {
   margin: 0 0 10px;
-  color: var(--brass);
+  color: var(--muted);
   font-size: 0.76rem;
-  font-weight: 850;
+  font-weight: 700;
   letter-spacing: 0;
   text-transform: uppercase;
 }
@@ -135,10 +132,10 @@ h1 {
     "Hiragino Sans",
     "Yu Gothic",
     sans-serif;
-  font-size: clamp(1.65rem, 5vw, 3.6rem);
+  font-size: clamp(1.55rem, 4.2vw, 3rem);
   line-height: 1.08;
   letter-spacing: 0;
-  font-weight: 900;
+  font-weight: 750;
 }
 
 .lead {
@@ -152,12 +149,12 @@ h1 {
 .metric {
   border: 1px solid var(--line);
   border-radius: 6px;
-  background: rgba(10, 11, 12, 0.62);
+  background: var(--panel-soft);
 }
 
 .hero-panel {
   padding: 24px 22px;
-  border-color: rgba(184, 135, 69, 0.36);
+  border-color: var(--line);
 }
 
 .hero-panel span,
@@ -168,14 +165,14 @@ label span {
   display: block;
   color: var(--muted);
   font-size: 0.8rem;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .hero-panel strong {
   display: block;
   margin: 8px 0 4px;
-  color: var(--steel);
-  font-size: 3rem;
+  color: var(--text);
+  font-size: 2.6rem;
   font-family:
     system-ui,
     -apple-system,
@@ -193,9 +190,8 @@ label span {
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: 6px;
-  background: rgba(18, 20, 23, 0.88);
+  background: var(--panel);
   box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(12px);
 }
 
 .controls-band {
@@ -215,14 +211,14 @@ input {
   border: 1px solid var(--line);
   border-radius: 4px;
   padding: 10px 12px;
-  background: #0a0b0c;
+  background: #ffffff;
   color: var(--text);
   outline: none;
 }
 
 input:focus {
-  border-color: var(--brass);
-  box-shadow: 0 0 0 3px rgba(184, 135, 69, 0.16);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(23, 23, 23, 0.08);
 }
 
 .input-suffix {
@@ -247,8 +243,8 @@ input:focus {
 
 .metric strong {
   font-size: 1.45rem;
-  color: var(--green);
-  font-weight: 850;
+  color: var(--text);
+  font-weight: 750;
   font-family:
     system-ui,
     -apple-system,
@@ -301,7 +297,7 @@ input:focus {
   padding: 0 10px 12px;
   color: var(--muted);
   font-size: 0.78rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .ingredient-list {
@@ -313,7 +309,7 @@ input:focus {
   padding: 12px;
   border: 1px solid var(--line);
   border-radius: 5px;
-  background: rgba(10, 11, 12, 0.58);
+  background: var(--panel);
 }
 
 .ingredient-row label span {
@@ -329,7 +325,7 @@ input:focus {
 }
 
 .row-cost strong {
-  color: var(--steel);
+  color: var(--text);
   font-size: 1.16rem;
   font-family:
     system-ui,
@@ -343,9 +339,9 @@ input:focus {
 
 .remove-row {
   min-width: 62px;
-  border-color: rgba(217, 111, 95, 0.5);
-  background: rgba(217, 111, 95, 0.12);
-  color: #ffd9d2;
+  border-color: var(--line);
+  background: var(--panel);
+  color: var(--danger);
 }
 
 .is-empty .remove-row {
