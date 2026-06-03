@@ -454,6 +454,48 @@ input:focus {
   }
 }
 
+.site-nav {
+  width: min(960px, calc(100% - 24px));
+  margin: 24px auto 0;
+  display: flex;
+  border: 1px solid var(--line-strong);
+  border-bottom: 0;
+  background: var(--panel);
+}
+
+.site-nav-link {
+  padding: 0 18px;
+  min-height: 38px;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-right: 1px solid var(--line);
+  transition: background 160ms ease;
+}
+
+.site-nav-link:last-child { border-right: 0; }
+.site-nav-link:hover { background: var(--panel-soft); }
+.site-nav-link.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+body.has-nav .app-shell { margin-top: 0; }
+
+@media (max-width: 620px) {
+  .site-nav {
+    width: min(100% - 16px, 1180px);
+    margin: 8px auto 0;
+  }
+
+  body.has-nav .app-shell { margin-top: 0; }
+}
+
 @media (max-width: 620px) {
   body {
     background-attachment: scroll;
@@ -533,4 +575,25 @@ input:focus {
   .file-button {
     width: calc(100% - 16px);
   }
+}
+
+/* ジン教本への相互リンク */
+.tool-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: 1px solid var(--line-strong);
+  background: var(--panel-soft);
+  color: var(--text);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 160ms ease,
+    background 160ms ease;
+}
+
+.tool-link:hover {
+  transform: translateY(-1px);
+  background: var(--field-active);
 }
