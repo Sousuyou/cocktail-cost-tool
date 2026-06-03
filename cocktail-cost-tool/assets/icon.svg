@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="カクテル原価計算ツール">
+  <rect width="512" height="512" rx="96" fill="#15120f"/>
+  <path d="M128 104h256l-96 128v112l64 32v32H160v-32l64-32V232L128 104Z" fill="#d8ad62"/>
+  <path d="M178 144h156l-53 70h-50l-53-70Z" fill="#2c251f"/>
+  <circle cx="328" cy="124" r="22" fill="#8bb58f"/>
+  <path d="M164 408h184" stroke="#f3ece2" stroke-width="22" stroke-linecap="round"/>
+</svg>
