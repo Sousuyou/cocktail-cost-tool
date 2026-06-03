@@ -576,24 +576,3 @@ body.has-nav .app-shell { margin-top: 0; }
     width: calc(100% - 16px);
   }
 }
-
-/* ジン教本への相互リンク */
-.tool-link {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 6px 12px;
-  border: 1px solid var(--line-strong);
-  background: var(--panel-soft);
-  color: var(--text);
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition:
-    transform 160ms ease,
-    background 160ms ease;
-}
-
-.tool-link:hover {
-  transform: translateY(-1px);
-  background: var(--field-active);
-}
