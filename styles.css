@@ -463,6 +463,8 @@ input:focus {
     width: min(100% - 16px, 1180px);
     margin: 8px auto;
     padding: 14px;
+    display: flex;
+    flex-direction: column;
   }
 
   .hero {
@@ -479,9 +481,25 @@ input:focus {
   }
 
   .ingredient-row label:first-child,
-  .ingredient-row label:nth-child(2),
-  .ingredient-row .row-cost {
+  .ingredient-row label:nth-child(2) {
     grid-column: 1 / -1;
+  }
+
+  .ingredient-row .row-cost {
+    grid-column: 1;
+  }
+
+  .ingredient-row .remove-row {
+    grid-column: 2;
+    width: 100%;
+  }
+
+  .toolbar {
+    order: 4;
+  }
+
+  .ingredients-section {
+    order: 3;
   }
 
   .hero,
