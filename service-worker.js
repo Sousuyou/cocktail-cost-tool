@@ -1,7 +1,7 @@
 // Bar Soutsu カクテル原価計算 — Service Worker
 // 更新方針: ページ本体(HTML)とJSONは「ネットワーク優先」で常に最新を取得し、
 //   オフライン時のみキャッシュを使う。画像・CSS・JSは「キャッシュ優先」で高速表示。
-const CACHE_NAME = "cocktail-cost-tool-v15";
+const CACHE_NAME = "cocktail-cost-tool-v16";
 const CACHE_FILES = [
   "./",
   "./index.html",

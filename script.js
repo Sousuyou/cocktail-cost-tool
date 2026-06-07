@@ -8,7 +8,6 @@ const targetRateInput = document.querySelector("#target-rate");
 const totalCostEl = document.querySelector("#total-cost");
 const costRateEl = document.querySelector("#cost-rate");
 const recommendedPriceEl = document.querySelector("#recommended-price");
-const recommendedPriceRoundedEl = document.querySelector("#recommended-price-rounded");
 const appMessageEl = document.querySelector("#app-message");
 const recipeNameInput = document.querySelector("#recipe-name");
 const saveRecipeButton = document.querySelector("#save-recipe");
@@ -114,15 +113,12 @@ function updateSummary() {
     costRateEl.classList.remove("cost-ok", "cost-over");
   }
 
-  // 推奨販売価格（計算値）と100円単位で切り上げた推奨額を併記
+  // 推奨販売価格（計算値）
   if (targetRate > 0 && total > 0) {
     const recommended = total / (targetRate / 100);
     recommendedPriceEl.textContent = formatYen(recommended);
-    const rounded = Math.ceil(recommended / 100) * 100;
-    recommendedPriceRoundedEl.textContent = `100円丸め: ${formatYen(rounded)}`;
   } else {
     recommendedPriceEl.textContent = "-";
-    recommendedPriceRoundedEl.textContent = "-";
   }
 
   refreshRemoveButtons();

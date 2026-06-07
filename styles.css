@@ -451,25 +451,6 @@ input:focus {
   color: var(--red) !important;
 }
 
-/* ===== 推奨販売価格（計算値＋100円丸め）の併記 ===== */
-.metric .price-rounded {
-  display: block;
-  margin-top: 4px;
-  color: var(--text);
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
-.metric .price-note {
-  display: block;
-  margin-top: 2px;
-  color: var(--muted);
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0;
-  text-transform: none;
-}
-
 /* ===== 使用量がボトル容量を超えた行の警告 ===== */
 .ingredient-row.is-over .used-input {
   border-color: var(--red);
