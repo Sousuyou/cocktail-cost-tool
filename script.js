@@ -240,7 +240,7 @@ function restoreCurrent() {
   }
 
   // 保存データがない初回は、これまで通りのサンプルを表示します。
-  addIngredientRow({ name: "ジン", bottlePrice: 5000, bottleVolume: 700, usedVolume: 30 });
+  addIngredientRow({ name: "ドライジン", bottlePrice: 5000, bottleVolume: 700, usedVolume: 30 });
   addIngredientRow({ name: "トニックウォーター", bottlePrice: 115, bottleVolume: 250, usedVolume: 120 });
 }
 
