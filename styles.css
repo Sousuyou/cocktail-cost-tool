@@ -13,6 +13,7 @@
   --accent: #161616;
   --on-accent: #ffffff; /* accent色の上に乗せる文字色 */
   --red: #a72821;
+  --green: #2f7d4f;
   --shadow: 0 18px 42px rgba(30, 30, 27, 0.08);
 }
 
@@ -32,6 +33,7 @@
     --accent: #ece9df;
     --on-accent: #14130f;
     --red: #d8736c;
+    --green: #6cc08a;
     --shadow: 0 18px 42px rgba(0, 0, 0, 0.45);
   }
 }
@@ -433,9 +435,167 @@ input:focus {
   box-shadow: inset 0 -2px 0 var(--accent);
 }
 
+/* 材料が1行だけのときは削除ボタンを「クリア」表示にする（JSでラベルも書き換え） */
 .is-empty .remove-row {
-  opacity: 0.4;
-  pointer-events: none;
+  border-color: var(--line);
+  background: var(--panel);
+  color: var(--muted);
+}
+
+/* ===== 原価率の色分け ===== */
+.cost-ok {
+  color: var(--green) !important;
+}
+
+.cost-over {
+  color: var(--red) !important;
+}
+
+/* ===== 推奨販売価格（計算値＋100円丸め）の併記 ===== */
+.metric .price-rounded {
+  display: block;
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.metric .price-note {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* ===== 使用量がボトル容量を超えた行の警告 ===== */
+.ingredient-row.is-over .used-input {
+  border-color: var(--red);
+  box-shadow: inset 0 -2px 0 var(--red);
+}
+
+.row-warning {
+  grid-column: 1 / -1;
+  display: none;
+  padding: 6px 10px;
+  border-top: 1px dashed var(--red);
+  color: var(--red);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.ingredient-row.is-over .row-warning {
+  display: block;
+}
+
+/* ===== お知らせメッセージ（CSV読込エラーなど） ===== */
+.app-message {
+  margin-top: 16px;
+  padding: 10px 12px;
+  border: 1px solid var(--line-strong);
+  background: var(--panel-soft);
+  color: var(--text);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.app-message.is-error {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+/* ===== レシピの保存・呼び出しパネル ===== */
+.recipe-band {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid var(--line-strong);
+  background: var(--panel);
+}
+
+.recipe-band > .recipe-title {
+  display: block;
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.recipe-save {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.recipe-save input {
+  flex: 1 1 200px;
+  min-height: 36px;
+  border: 1px solid var(--line-strong);
+  background: var(--field);
+  color: var(--text);
+}
+
+.recipe-save button {
+  padding: 0 16px;
+}
+
+.recipe-saved-help {
+  display: block;
+  margin: 12px 0 6px;
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.recipe-list {
+  display: grid;
+  gap: 6px;
+}
+
+.recipe-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  background: var(--panel-soft);
+}
+
+.recipe-item .recipe-item-name {
+  flex: 1 1 auto;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.recipe-item .recipe-item-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.recipe-item button {
+  min-height: 32px;
+  padding: 0 12px;
+}
+
+.recipe-item .recipe-delete {
+  background: var(--panel);
+  color: var(--red);
+  border-color: var(--red);
+}
+
+.recipe-empty {
+  color: var(--muted);
+  font-size: 0.74rem;
 }
 
 @media (max-width: 920px) {

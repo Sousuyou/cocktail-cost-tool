@@ -69,6 +69,8 @@
         <div class="metric">
           <span>推奨販売価格</span>
           <strong id="recommended-price">-</strong>
+          <span class="price-rounded" id="recommended-price-rounded">-</span>
+          <span class="price-note">100円単位で切り上げた推奨額です</span>
         </div>
       </section>
 
@@ -91,6 +93,20 @@
           <span></span>
         </div>
         <div id="ingredient-list" class="ingredient-list"></div>
+      </section>
+
+      <!-- CSV読込エラーなどのお知らせ（普段は非表示） -->
+      <div id="app-message" class="app-message" role="status" aria-live="polite" hidden></div>
+
+      <!-- レシピの保存・呼び出し -->
+      <section class="recipe-band" aria-label="レシピの保存と呼び出し">
+        <span class="recipe-title">レシピを保存・呼び出し</span>
+        <div class="recipe-save">
+          <input id="recipe-name" type="text" placeholder="レシピ名を入力（例: ジントニック）" />
+          <button id="save-recipe" type="button">名前を付けて保存</button>
+        </div>
+        <span class="recipe-saved-help">保存したレシピ</span>
+        <div id="recipe-list" class="recipe-list"></div>
       </section>
     </main>
 
@@ -117,6 +133,7 @@
           <strong>¥0</strong>
         </div>
         <button class="remove-row" type="button" aria-label="材料を削除">削除</button>
+        <p class="row-warning">使用量がボトル容量を超えています。容量と使用量をご確認ください。</p>
       </article>
     </template>
 
